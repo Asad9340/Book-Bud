@@ -10,12 +10,12 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function NavList() {
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  text-xl font-medium"
+        className="p-1  text-xl font-medium font-['Work Sans']"
       >
         <a
           href="#"
@@ -28,7 +28,7 @@ function NavList() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  text-xl font-medium"
+        className="p-1  text-xl font-medium font-['Work Sans']"
       >
         <a
           href="#"
@@ -41,7 +41,7 @@ function NavList() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  text-xl font-medium"
+        className="p-1  text-xl font-medium font-['Work Sans']"
       >
         <a
           href="#"
@@ -74,18 +74,18 @@ function NavigationBar() {
             as="a"
             href="#"
             variant="h6"
-            className="mr-4 cursor-pointer py-1.5 text-xl md:text-2xl font-medium md:font-semibold"
+            className="mr-4 cursor-pointer py-1.5 text-xl md:text-2xl font-medium md:font-semibold  font-['Work Sans']"
           >
             BookBud
           </Typography>
           <div className="hidden lg:block">
             <NavList />
           </div>
-          <div className="lg:flex gap-4 hidden">
-            <Button className="bg-[#23BE0A] text-lg py-2 px-4 font-semibold">
+          <div className="lg:flex gap-4 hidden ">
+            <Button className="bg-[#23BE0A] text-lg py-2 px-4 font-semibold font-['Work Sans']">
               Log In
             </Button>
-            <Button className="bg-[#59C6D2] text-lg py-2 px-4 font-semibold">
+            <Button className="bg-[#59C6D2] text-lg py-2 px-4 font-semibold font-['Work Sans']">
               Sign Up
             </Button>
           </div>
