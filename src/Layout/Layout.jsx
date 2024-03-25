@@ -3,7 +3,7 @@ import Footer from '../Pages/Shared/Footer/Footer'
 import NavigationBar from '../Pages/Shared/NavigationBar/NavigationBar'
 function Layout() {
   return (
-    <div>
+    <div className='max-w-6xl mx-auto'>
       <NavigationBar />
       <Outlet/>
       <Footer/>
