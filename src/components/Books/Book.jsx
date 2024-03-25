@@ -1,7 +1,6 @@
 import { FaStarHalfStroke } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 function Book({ book }) {
-  console.log(book);
   const { bookId, image, tags, author, bookName, category, rating } = book;
   return (
     <NavLink to={`/book-details/${bookId}`}>

@@ -7,6 +7,7 @@ import {
   Button,
 } from '@material-tailwind/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { NavLink } from 'react-router-dom';
 
 function NavList() {
   return (
@@ -17,12 +18,12 @@ function NavList() {
         color="blue-gray"
         className="p-1  text-xl font-medium font-['Work Sans']"
       >
-        <a
-          href="#"
+        <NavLink
+          to="/"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Home
-        </a>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
@@ -30,12 +31,12 @@ function NavList() {
         color="blue-gray"
         className="p-1  text-xl font-medium font-['Work Sans']"
       >
-        <a
-          href="#"
+        <NavLink
+          to="/listed-books"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Listed Books
-        </a>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
@@ -43,12 +44,12 @@ function NavList() {
         color="blue-gray"
         className="p-1  text-xl font-medium font-['Work Sans']"
       >
-        <a
-          href="#"
+        <NavLink
+          to='to-read'
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Pages to Read
-        </a>
+        </NavLink>
       </Typography>
     </ul>
   );

@@ -5,9 +5,12 @@ import {
   Typography,
   Button,
 } from '@material-tailwind/react';
+import { saveLocalStorage } from '../../utils/localStorage';
 
 function Details({ book }) {
-  console.log(book);
+  const handleRead = () => {
+    saveLocalStorage(book);
+ }
   const {
     image,
     tags,
@@ -80,7 +83,7 @@ function Details({ book }) {
             </div>
           </div>
           <div className="mt-4 md:mt-12 flex gap-4 md:gap-8">
-            <Button variant="outlined">Read</Button>
+            <Button onClick={handleRead} variant="outlined">Read</Button>
             <Button className="bg-[#50B1C9]">Wishlist</Button>
           </div>
         </CardBody>
