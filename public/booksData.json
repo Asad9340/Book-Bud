@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/RHpB076/book-cover-To-Kill-a-Mockingbird-many-1961.webp",
+    "review": "A timeless classic that explores themes of racial injustice and moral growth in the American South.",
+    "totalPages": 336,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Classics", "Social Issues"],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 2,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/yhM7Ch8/612-ADI-BVl-L-AC-UF1000-1000-QL80.jpg",
+    "review": "A dystopian novel that warns of the dangers of totalitarianism and government surveillance.",
+    "totalPages": 328,
+    "rating": 4.7,
+    "category": "Science Fiction",
+    "tags": ["Dystopian", "Political"],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 3,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/W0WTBVn/The-Great-Gatsby-Cover-1925-Retouched.jpg",
+    "review": "A tale of love, greed, and the American Dream set in the Jazz Age.",
+    "totalPages": 180,
+    "rating": 4.4,
+    "category": "Fiction",
+    "tags": ["Classics", "Romance"],
+    "publisher": "Charles Scribner's Sons",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 4,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/mJ1Q6CF/MV5-BMTA1-NDQ3-NTcy-OTNe-QTJe-QWpw-Z15-Bb-WU3-MDA0-Mz-A4-Mz-E-V1.jpg",
+    "review": "A delightful comedy of manners featuring the iconic characters Elizabeth Bennet and Mr. Darcy.",
+    "totalPages": 279,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Classics", "Romance"],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "bookId": 5,
+    "bookName": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "image": "https://i.ibb.co/PM8yHcn/88c8fe011aa2683f66e43efe9922dafc.jpg",
+    "review": "The magical tale that introduces readers to the wizarding world and the boy who lived.",
+    "totalPages": 223,
+    "rating": 4.8,
+    "category": "Fantasy",
+    "tags": ["Children's", "Magic"],
+    "publisher": "Bloomsbury",
+    "yearOfPublishing": 1997
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/vvfzTjc/The-Catcher-in-the-Rye-1951-first-edition-cover.jpg",
+    "review": "A coming-of-age novel that captures the angst and alienation of adolescence.",
+    "totalPages": 224,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": ["Classics", "Coming-of-Age"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  }
+]
