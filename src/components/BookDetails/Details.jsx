@@ -5,13 +5,26 @@ import {
   Typography,
   Button,
 } from '@material-tailwind/react';
-import { saveLocalStorage } from '../../utils/localStorage';
+import {
+  getFromLocalStorage,
+  saveLocalStorage,
+} from '../../utils/localStorage';
 
 function Details({ book }) {
   const handleRead = () => {
-    saveLocalStorage(book);
- }
+    saveLocalStorage(book, 'books');
+  };
+  const handleWishlist = bookId => {
+    const data = getFromLocalStorage('books');
+    const bookList = data.find(item => Object.values(item).includes(bookId));
+    if (!bookList) {
+      saveLocalStorage(book, 'wishlist');
+    } else {
+      console.log('hi');
+    }
+  };
   const {
+    bookId,
     image,
     tags,
     author,
@@ -83,8 +96,15 @@ function Details({ book }) {
             </div>
           </div>
           <div className="mt-4 md:mt-12 flex gap-4 md:gap-8">
-            <Button onClick={handleRead} variant="outlined">Read</Button>
-            <Button className="bg-[#50B1C9]">Wishlist</Button>
+            <Button onClick={handleRead} variant="outlined">
+              Read
+            </Button>
+            <Button
+              onClick={() => handleWishlist(bookId)}
+              className="bg-[#50B1C9]"
+            >
+              Wishlist
+            </Button>
           </div>
         </CardBody>
       </Card>
