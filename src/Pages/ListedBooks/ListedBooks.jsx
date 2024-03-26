@@ -6,9 +6,7 @@ import Wishlist from '../../components/Wishlist/Wishlist';
 
 function ListedBooks() {
   const readBookList = getFromLocalStorage('books');
-  console.log(readBookList);
   const wishList = getFromLocalStorage('wishlist');
-  console.log(wishList);
   return (
     <div>
       <Tabs defaultIndex={0} onSelect={index => console.log(index)}>

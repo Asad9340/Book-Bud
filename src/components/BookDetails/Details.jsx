@@ -9,6 +9,7 @@ import {
   getFromLocalStorage,
   saveLocalStorage,
 } from '../../utils/localStorage';
+import { toast } from 'react-toastify';
 
 function Details({ book }) {
   const handleRead = () => {
@@ -17,10 +18,44 @@ function Details({ book }) {
   const handleWishlist = bookId => {
     const data = getFromLocalStorage('books');
     const bookList = data.find(item => Object.values(item).includes(bookId));
-    if (!bookList) {
+    const dataFromWishlist = getFromLocalStorage('wishlist');
+    const wishlist = dataFromWishlist.find(item =>
+      Object.values(item).includes(bookId)
+    );
+    if (!bookList && !wishlist) {
       saveLocalStorage(book, 'wishlist');
+      toast.success('Added to wishlist', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      });
+    } else if (bookList) {
+      toast.warn('Already exist in  Read Books', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      });
     } else {
-      console.log('hi');
+      toast.warn('Already exist in wishlist', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      });
     }
   };
   const {
@@ -38,11 +73,11 @@ function Details({ book }) {
   } = book;
   return (
     <div className="my-6 md:my-12">
-      <Card className="w-full flex-col lg:flex-row">
+      <Card className=" flex-col lg:flex-row">
         <CardHeader
           shadow={false}
           floated={false}
-          className="m-3 w-full lg:w-2/5 shrink-0 rounded-r-none"
+          className="lg:w-2/5 shrink-0 rounded-r-none"
         >
           <img
             src={image}
@@ -55,9 +90,9 @@ function Details({ book }) {
             {bookName}
           </Typography>
           <Typography className="mb-2">
-            <p className="text-[#131313CC] text-lg md:text-xl font-medium">
+            <span className="text-[#131313CC] text-lg md:text-xl font-medium">
               By: {author}
-            </p>
+            </span>
           </Typography>{' '}
           <hr />
           <Typography
@@ -85,7 +120,7 @@ function Details({ book }) {
             <div className="space-y-3 text-[#131313B2]">
               <p>Number of Pages:</p>
               <p>Publisher:</p>
-              <p>Year of Publishing::</p>
+              <p>Year of Publishing:</p>
               <p>Rating:</p>
             </div>
             <div className="col-span-2 space-y-3">
