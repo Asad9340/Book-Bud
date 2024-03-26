@@ -1,10 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
-import Layout from "../Layout/Layout";
-import Error from "../Pages/Error/Error";
-import Homepage from "../Pages/Home/Homepage/Homepage";
-import BookDetails from "../components/BookDetails/BookDetails";
-import ListedBooks from "../Pages/ListedBooks/ListedBooks";
-import PagesToRead from "../Pages/PagesToRead/PagesToRead";
+import { createBrowserRouter } from 'react-router-dom';
+import Layout from '../Layout/Layout';
+import Error from '../Pages/Error/Error';
+import Homepage from '../Pages/Home/Homepage/Homepage';
+import BookDetails from '../components/BookDetails/BookDetails';
+import ListedBooks from '../Pages/ListedBooks/ListedBooks';
+import PagesToRead from '../Pages/PagesToRead/PagesToRead';
+import About from '../Pages/About/About';
 
 export const router = createBrowserRouter([
   {
@@ -18,17 +19,20 @@ export const router = createBrowserRouter([
       },
       {
         path: '/book-details/:bookId',
-        element:<BookDetails/>
-
+        element: <BookDetails />,
       },
       {
         path: '/listed-books',
-        element:<ListedBooks/>
+        element: <ListedBooks />,
       },
       {
         path: '/to-read',
-        element:<PagesToRead/>
-      }
+        element: <PagesToRead />,
+      },
+      {
+        path: '/about',
+        element:<About/>
+      },
     ],
   },
 ]);

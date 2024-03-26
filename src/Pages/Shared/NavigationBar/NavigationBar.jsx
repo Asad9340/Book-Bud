@@ -62,7 +62,7 @@ function NavList() {
         className="p-1  text-xl font-medium font-['Work Sans']"
       >
         <NavLink
-          to="to-read"
+          to="/to-read"
           className={({ isActive, isPending }) =>
             isPending ? (
               <Spinner />
@@ -74,6 +74,27 @@ function NavList() {
           }
         >
           Pages to Read
+        </NavLink>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1  text-xl font-medium font-['Work Sans']"
+      >
+        <NavLink
+          to="/about"
+          className={({ isActive, isPending }) =>
+            isPending ? (
+              <Spinner />
+            ) : isActive ? (
+              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+            ) : (
+              'flex items-center'
+            )
+          }
+        >
+          About
         </NavLink>
       </Typography>
     </ul>
