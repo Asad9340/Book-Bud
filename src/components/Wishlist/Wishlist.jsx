@@ -1,9 +1,11 @@
 import { IoLocation } from 'react-icons/io5';
 import { FaUser } from 'react-icons/fa';
 import { MdContactPage } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 function Wishlist({book}) {
   const {
+    bookId,
     image,
     tags,
     author,
@@ -52,15 +54,17 @@ function Wishlist({book}) {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-4 mt-4 lg:mt-0">
-          <button className="bg-[#328EFF26] text-[#328EFF] px-4 py-2 rounded-full">
+          <p className="bg-[#328EFF26] text-[#328EFF] px-4 py-2 rounded-full">
             Category: {category}
-          </button>
-          <button className="bg-[#FFAC3326] text-[#FFAC33] px-4 py-2 rounded-full">
+          </p>
+          <p className="bg-[#FFAC3326] text-[#FFAC33] px-4 py-2 rounded-full">
             Rating: {rating}
-          </button>
-          <button className="bg-[#23BE0A] text-white px-4 py-2 rounded-full">
-            View Details
-          </button>
+          </p>
+          <Link to={`/book-details/${bookId}`}>
+            <button className="bg-[#23BE0A] text-white px-4 py-2 rounded-full">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
