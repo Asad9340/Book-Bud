@@ -12,7 +12,7 @@ import Spinner from '../../../components/Spinner/Spinner';
 
 function NavList() {
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-3 ">
       <Typography
         as="li"
         variant="small"
@@ -25,9 +25,9 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
             ) : (
-              'flex items-center'
+              'flex items-center border border-white'
             )
           }
         >
@@ -46,9 +46,9 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
             ) : (
-              'flex items-center'
+              'flex items-center border border-white'
             )
           }
         >
@@ -67,13 +67,34 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
             ) : (
-              'flex items-center'
+              'flex items-center border border-white'
             )
           }
         >
           Pages to Read
+        </NavLink>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1  text-xl font-medium font-['Work Sans']"
+      >
+        <NavLink
+          to="/legacy-books"
+          className={({ isActive, isPending }) =>
+            isPending ? (
+              <Spinner />
+            ) : isActive ? (
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
+            ) : (
+              'flex items-center border border-white'
+            )
+          }
+        >
+          Legacy Book
         </NavLink>
       </Typography>
       <Typography
@@ -88,9 +109,9 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
             ) : (
-              'flex items-center'
+              'flex items-center border border-white'
             )
           }
         >

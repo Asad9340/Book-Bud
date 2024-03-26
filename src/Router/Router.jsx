@@ -6,6 +6,7 @@ import BookDetails from '../components/BookDetails/BookDetails';
 import ListedBooks from '../Pages/ListedBooks/ListedBooks';
 import PagesToRead from '../Pages/PagesToRead/PagesToRead';
 import About from '../Pages/About/About';
+import LegacyBooks from '../Pages/LegacyBooks/LegacyBooks';
 
 export const router = createBrowserRouter([
   {
@@ -30,8 +31,13 @@ export const router = createBrowserRouter([
         element: <PagesToRead />,
       },
       {
+        path: '/legacy-books',
+        element: <LegacyBooks />,
+        loader:()=> fetch('/legacyBooks.json'),
+      },
+      {
         path: '/about',
-        element:<About/>
+        element: <About />,
       },
     ],
   },

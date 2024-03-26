@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/39/The_Hunger_Games_cover.jpg",
+    "review": "A thrilling dystopian novel set in a post-apocalyptic society where teenagers are forced to participate in a televised death match.",
+    "totalPages": 374,
+    "rating": 4.2,
+    "category": "Young Adult",
+    "tags": ["Dystopian", "Adventure"],
+    "publisher": "Scholastic Press",
+    "yearOfPublishing": 2008
+  },
+  {
+    "bookId": 2,
+    "bookName": "Lord of the Rings: The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/8e/The_Fellowship_of_the_Ring_cover.gif",
+    "review": "An epic fantasy novel that begins the journey of Frodo Baggins and his companions to destroy the One Ring and defeat the dark lord Sauron.",
+    "totalPages": 423,
+    "rating": 4.8,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Epic"],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1954
+  },
+  {
+    "bookId": 3,
+    "bookName": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/4a/TheHobbit_FirstEdition.jpg",
+    "review": "A classic fantasy novel chronicling the adventures of Bilbo Baggins as he embarks on a quest to reclaim a stolen treasure guarded by a dragon.",
+    "totalPages": 310,
+    "rating": 4.7,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Epic"],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1937
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/6b/DaVinciCode.jpg",
+    "review": "A gripping mystery thriller that follows symbologist Robert Langdon as he uncovers an ancient secret that could shake the foundations of Christianity.",
+    "totalPages": 454,
+    "rating": 4.0,
+    "category": "Mystery",
+    "tags": ["Thriller", "Conspiracy"],
+    "publisher": "Doubleday",
+    "yearOfPublishing": 2003
+  },
+  {
+    "bookId": 5,
+    "bookName": "Lord of the Rings: The Two Towers",
+    "author": "J.R.R. Tolkien",
+    "image": "https://m.media-amazon.com/images/I/8183Hwkgl6L._AC_UF894,1000_QL80_.jpg",
+    "review": "The second volume of the epic fantasy series follows the continued journey of Frodo Baggins and his companions as they face new challenges and dangers.",
+    "totalPages": 352,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Epic"],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1954
+  },
+  {
+    "bookId": 6,
+    "bookName": "Lord of the Rings: The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "image": "https://cdn.waterstones.com/bookjackets/large/9780/0085/9780008567149.jpg",
+    "review": "The final installment of the epic fantasy trilogy brings the epic quest to destroy the One Ring to its thrilling conclusion, as the forces of good and evil clash in the ultimate battle for Middle-earth.",
+    "totalPages": 416,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Epic"],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1955
+  }
+]
