@@ -34,8 +34,9 @@ export const saveLocalStorage = (data, key) => {
     }
   }
 };
-
 export const getFromLocalStorage = key => {
   const storageData = JSON.parse(localStorage.getItem(key)) || [];
   return storageData;
 };
+
+

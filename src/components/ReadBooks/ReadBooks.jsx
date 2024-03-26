@@ -3,6 +3,7 @@ import { FaUser } from 'react-icons/fa';
 import { MdContactPage } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 function ReadBooks({ book }) {
+
   const {
     bookId,
     image,
