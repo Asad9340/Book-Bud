@@ -1,7 +1,6 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import {
-  getFromLocalStorage} from '../../utils/localStorage';
+import { getFromLocalStorage } from '../../utils/localStorage';
 import ReadBooks from '../../components/ReadBooks/ReadBooks';
 import Wishlist from '../../components/Wishlist/Wishlist';
 import { useEffect, useState } from 'react';
@@ -35,6 +34,11 @@ function ListedBooks() {
     }
   };
 
+  const handleDelete = () => {
+    localStorage.clear();
+    setReadList([]);
+  };
+
   return (
     <div>
       <div className="my-8 md:my-12">
@@ -55,6 +59,14 @@ function ListedBooks() {
               <option value="numberOfPages">Number Of Pages</option>
               <option value="publishedYear">Published Year</option>
             </select>
+          </div>
+          <div>
+            <button
+              onClick={handleDelete}
+              className="bg-red-500 text-white px-4 py-2 rounded-md"
+            >
+              View Details
+            </button>
           </div>
         </div>
       </div>
