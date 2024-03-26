@@ -4,6 +4,7 @@ import { getFromLocalStorage } from '../../utils/localStorage';
 import ReadBooks from '../../components/ReadBooks/ReadBooks';
 import Wishlist from '../../components/Wishlist/Wishlist';
 import { useEffect, useState } from 'react';
+import EmptyPageMessage from '../../components/EmptyPageMessage';
 
 function ListedBooks() {
   const [readList, setReadList] = useState([]);
@@ -45,7 +46,7 @@ function ListedBooks() {
   const handleDelete = () => {
     localStorage.clear();
     setReadList([]);
-    setWishList([])
+    setWishList([]);
   };
 
   return (
@@ -59,11 +60,11 @@ function ListedBooks() {
           <div className="flex justify-center my-4">
             <select
               onChange={handleSelectChange}
-              className="bg-slate-200 block h-10 w-52 rounded-md border border-gray-800"
+              className="bg-slate-200 block h-10 w-52 rounded-md  bg-[#23BE0A]"
               name="option"
               id=""
             >
-              <option value="all">All</option>
+              <option value="all">Sort By</option>
               <option value="rating">Rating</option>
               <option value="numberOfPages">Number Of Pages</option>
               <option value="publishedYear">Published Year</option>
@@ -74,7 +75,7 @@ function ListedBooks() {
               onClick={handleDelete}
               className="bg-red-500 text-white px-4 py-2 rounded-md"
             >
-              View Details
+              Clear LocalStorage
             </button>
           </div>
         </div>
@@ -86,14 +87,22 @@ function ListedBooks() {
             <Tab>Wishlist Books</Tab>
           </TabList>
           <TabPanel>
-            {readList.map((book, index) => (
-              <ReadBooks key={index} book={book} />
-            ))}
+            {readList.length > 0 ? (
+              readList.map((book, index) => (
+                <ReadBooks key={index} book={book} />
+              ))
+            ) : (
+              <EmptyPageMessage message="Read Book" />
+            )}
           </TabPanel>
           <TabPanel>
-            {wishList.map((book, index) => (
-              <Wishlist key={index} book={book} />
-            ))}
+            {wishList.length > 0 ? (
+              wishList.map((book, index) => (
+                <Wishlist key={index} book={book} />
+              ))
+            ) : (
+              <EmptyPageMessage message="WishList Books" />
+            )}
           </TabPanel>
         </Tabs>
       </div>
