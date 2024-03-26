@@ -15,28 +15,37 @@ function ListedBooks() {
   const handleSelectChange = event => {
     if (event.target.value === 'all') {
       setReadList(getFromLocalStorage('books'));
+      setWishList(getFromLocalStorage('wishlist'));
     } else if (event.target.value === 'rating') {
       const sortedOnRating = readList.sort((a, b) => b.rating - a.rating);
       setReadList([...sortedOnRating]);
-      setWishList([...sortedOnRating]);
+      const sortedOnRatingWish = wishList.sort((a, b) => b.rating - a.rating);
+      setWishList([...sortedOnRatingWish]);
     } else if (event.target.value === 'numberOfPages') {
       const sortOnPageNumber = readList.sort(
         (a, b) => b.totalPages - a.totalPages
       );
       setReadList([...sortOnPageNumber]);
-      setWishList([...sortOnPageNumber]);
+      const sortOnPageNumberWish = wishList.sort(
+        (a, b) => b.totalPages - a.totalPages
+      );
+      setWishList([...sortOnPageNumberWish]);
     } else if (event.target.value === 'publishedYear') {
       const sortOnPublishingYear = readList.sort(
         (a, b) => b.yearOfPublishing - a.yearOfPublishing
       );
       setReadList([...sortOnPublishingYear]);
-      setWishList([...sortOnPublishingYear]);
+      const sortOnPublishingYearWish = wishList.sort(
+        (a, b) => b.yearOfPublishing - a.yearOfPublishing
+      );
+      setWishList([...sortOnPublishingYearWish]);
     }
   };
 
   const handleDelete = () => {
     localStorage.clear();
     setReadList([]);
+    setWishList([])
   };
 
   return (
