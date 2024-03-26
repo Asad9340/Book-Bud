@@ -1,15 +1,10 @@
 import { getFromLocalStorage } from '../../utils/localStorage';
-import { BarChart, Bar, XAxis, YAxis } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import EmptyPageMessage from './../../components/EmptyPageMessage';
 
 function PagesToRead() {
   const data = getFromLocalStorage('books');
   console.log(data);
-  // const data = [
-  //   { name: 'Book 1', page: 400 },
-  //   { name: 'Book 2', page: 500 },
-  //   { name: 'Book 3', page: 300 },
-  // ];
   const TriangleBar = props => {
     const { fill, x, y, width, height } = props;
 
@@ -25,17 +20,23 @@ function PagesToRead() {
     }, ${y + height}
    Z`;
   return (
-    <div className="flex flex-col items-center my-8 md:my-12">
-      {data.length > 0 ? (
-        <BarChart width={900} height={400} data={data}>
-          <XAxis dataKey="bookName" />
-          <YAxis />
-          <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} />
-        </BarChart>
-      ) : (
-        <EmptyPageMessage message="Show the Chart" />
-      )}
-    </div>
+    <ResponsiveContainer width="100%" height="100%">
+      <div className="flex flex-col items-center my-8 md:my-12">
+        {data.length > 0 ? (
+          <BarChart
+            width={data.length > 3 ? 500 : 300}
+            height={500}
+            data={data}
+          >
+            <XAxis dataKey="bookName" />
+            <YAxis />
+            <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} />
+          </BarChart>
+        ) : (
+          <EmptyPageMessage message="Show the Chart" />
+        )}
+      </div>
+    </ResponsiveContainer>
   );
 }
 
