@@ -1,4 +1,5 @@
-import { Button } from "@material-tailwind/react";
+import { Button } from '@material-tailwind/react';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -7,9 +8,9 @@ function Hero() {
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold px-4 mb-4 md:mb-8">
           Books to freshen up your bookshelf
         </h2>
-        <div>
+        <Link to="/listed-books">
           <Button className="bg-[#23BE0A] text-md ml-4">Visit The List</Button>
-        </div>
+        </Link>
       </div>
       <div className=" flex items-center justify-center">
         <img

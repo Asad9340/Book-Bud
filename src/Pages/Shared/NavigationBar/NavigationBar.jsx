@@ -8,6 +8,7 @@ import {
 } from '@material-tailwind/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { NavLink } from 'react-router-dom';
+import Spinner from '../../../components/Spinner/Spinner';
 
 function NavList() {
   return (
@@ -20,7 +21,15 @@ function NavList() {
       >
         <NavLink
           to="/"
-          className="flex items-center hover:text-blue-500 transition-colors"
+          className={({ isActive, isPending }) =>
+            isPending ? (
+              <Spinner />
+            ) : isActive ? (
+              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+            ) : (
+              'flex items-center'
+            )
+          }
         >
           Home
         </NavLink>
@@ -33,7 +42,15 @@ function NavList() {
       >
         <NavLink
           to="/listed-books"
-          className="flex items-center hover:text-blue-500 transition-colors"
+          className={({ isActive, isPending }) =>
+            isPending ? (
+              <Spinner />
+            ) : isActive ? (
+              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+            ) : (
+              'flex items-center'
+            )
+          }
         >
           Listed Books
         </NavLink>
@@ -45,8 +62,16 @@ function NavList() {
         className="p-1  text-xl font-medium font-['Work Sans']"
       >
         <NavLink
-          to='to-read'
-          className="flex items-center hover:text-blue-500 transition-colors"
+          to="to-read"
+          className={({ isActive, isPending }) =>
+            isPending ? (
+              <Spinner />
+            ) : isActive ? (
+              'border border-[#23BE0A] text-[#23BE0A] px-4 py-2 rounded-md'
+            ) : (
+              'flex items-center'
+            )
+          }
         >
           Pages to Read
         </NavLink>
