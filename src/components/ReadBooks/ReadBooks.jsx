@@ -17,7 +17,7 @@ function ReadBooks({ book }) {
     yearOfPublishing,
   } = book;
   return (
-    <div className="flex flex-col lg:grid gap-8 grid-cols-4 mt-6 md:mt-12 border p-3 rounded-lg m-4">
+    <div className="flex flex-col lg:grid gap-8 grid-cols-4 mt-6 md:mt-12 border border-gray-500 p-3 rounded-lg">
       <div>
         <img className="h-[350px] w-full rounded-lg" src={image} alt="" />
       </div>

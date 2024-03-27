@@ -5,7 +5,7 @@ function LegacyBooks() {
   const data = useLoaderData();
   console.log(data)
   return (
-    <div className="my-6 md:my-12">
+    <div className="md:my-12">
       <div className="space-y-4">
         <h2 className="text-3xl font-semibold md:font-bold text-center">
           The Timeless Canon: Enduring Works of Literature
