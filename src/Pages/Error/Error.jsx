@@ -1,16 +1,22 @@
 import { Button } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 function Error() {
+  const error = useRouteError();
+  const { status, statusText ,error:errorMessage} = error;
+  console.log(error)
   return (
     <section className="flex items-center h-screen p-16  bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 ">
       <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
         <div className="max-w-md text-center">
           <h2 className="mb-8 font-extrabold text-9xl text-gray-600 dark:text-gray-400">
-            <span className="sr-only">Error</span>404
+            <span className="sr-only">Error</span>{status}
           </h2>
           <p className="text-2xl font-semibold md:text-3xl">
-            Sorry, we couldnt find this page.
+            {statusText}
+          </p>
+          <p className="mt-4 mb-8 text-gray-400 dark:text-gray-600 ">
+            {errorMessage.message}
           </p>
           <p className="mt-4 mb-8 text-gray-400 dark:text-gray-600 ">
             But dont worry, you can find plenty of other things on our homepage.

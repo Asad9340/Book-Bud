@@ -136,7 +136,7 @@ function NavigationBar() {
   }, []);
   return (
     <div>
-      <Navbar className=" py-3 shadow-none px-4 m-4 ">
+      <Navbar className=" py-3 shadow-none">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
