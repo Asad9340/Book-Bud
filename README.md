@@ -1,7 +1,7 @@
 # Book Collection Website
 
-[live link on Surge](http://bookbud.surge.sh/)
 [live link Netlify](https://bookbudweb.netlify.app/)
+[live link on Surge](http://bookbud.surge.sh/)
 
 ## Features and Characteristics
 
