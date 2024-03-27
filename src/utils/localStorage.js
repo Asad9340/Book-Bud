@@ -21,16 +21,19 @@ export const saveLocalStorage = (data, key) => {
     }
   } else {
     if (key === 'books') {
-      toast.warn('Already Exist book to read list', {
-        position: 'top-right',
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-      });
+      toast.warn(
+        'It is already been added and  Book will not be added to the list',
+        {
+          position: 'top-right',
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        }
+      );
     }
   }
 };
@@ -38,5 +41,3 @@ export const getFromLocalStorage = key => {
   const storageData = JSON.parse(localStorage.getItem(key)) || [];
   return storageData;
 };
-
-

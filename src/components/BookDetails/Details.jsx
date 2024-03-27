@@ -35,27 +35,33 @@ function Details({ book }) {
         theme: 'colored',
       });
     } else if (bookList) {
-      toast.warn('Already exist in  Read Books', {
-        position: 'top-right',
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-      });
+      toast.warn(
+        'its already been added to Read List and this Book will not be added to the list.',
+        {
+          position: 'top-right',
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        }
+      );
     } else {
-      toast.warn('Already exist in wishlist', {
-        position: 'top-right',
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-      });
+      toast.warn(
+        'its already been added to WishList and this Book will not be added to the list.',
+        {
+          position: 'top-right',
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        }
+      );
     }
   };
   const {
@@ -86,7 +92,10 @@ function Details({ book }) {
           />
         </CardHeader>
         <CardBody>
-          <Typography  color="black" className="mb-4 uppercase text-2xl md:text-3xl">
+          <Typography
+            color="black"
+            className="mb-4 uppercase text-2xl md:text-3xl"
+          >
             {bookName}
           </Typography>
           <Typography className="mb-2">

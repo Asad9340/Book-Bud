@@ -1,9 +1,10 @@
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { getFromLocalStorage } from '../../utils/localStorage';
+import EmptyPageMessage from '../../components/EmptyPageMessage';
 
 function PagesToRead() {
   const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
-  const data=getFromLocalStorage('books');
+  const data = getFromLocalStorage('books');
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
       x + width / 2
@@ -20,7 +21,7 @@ function PagesToRead() {
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
-  return (
+  return data.length ? (
     <div className="flex justify-center h-[65vh] items-center my-8 md:my-12">
       <BarChart
         width={600}
@@ -48,6 +49,8 @@ function PagesToRead() {
         </Bar>
       </BarChart>
     </div>
+  ) : (
+    <EmptyPageMessage message="Read list to show the Chart" />
   );
 }
 

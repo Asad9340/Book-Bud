@@ -7,7 +7,7 @@ import {
   Button,
 } from '@material-tailwind/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function NavList() {
   return (
@@ -38,11 +38,9 @@ function NavList() {
         <NavLink
           to="/listed-books"
           className={({ isActive }) =>
-             isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
-            ) : (
-              'flex items-center border border-white'
-            )
+            isActive
+              ? 'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
+              : 'flex items-center border border-white'
           }
         >
           Listed Books
@@ -57,11 +55,9 @@ function NavList() {
         <NavLink
           to="/to-read"
           className={({ isActive }) =>
-             isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
-            ) : (
-              'flex items-center border border-white'
-            )
+            isActive
+              ? 'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
+              : 'flex items-center border border-white'
           }
         >
           Pages to Read
@@ -76,11 +72,9 @@ function NavList() {
         <NavLink
           to="/legacy-books"
           className={({ isActive }) =>
-             isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
-            ) : (
-              'flex items-center border border-white'
-            )
+            isActive
+              ? 'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
+              : 'flex items-center border border-white'
           }
         >
           Legacy Book
@@ -123,14 +117,16 @@ function NavigationBar() {
     <div>
       <Navbar className="shadow-none">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            variant="h6"
-            className="mr-4 cursor-pointer py-1.5 text-xl md:text-2xl font-medium md:font-semibold  font-['Work Sans']"
-          >
-            BookBud
-          </Typography>
+          <Link to='/'>
+            <Typography
+              as="a"
+              href="#"
+              variant="h6"
+              className="mr-4 cursor-pointer py-1.5 text-2xl md:text-3xl font-medium md:font-semibold  font-['Work Sans']"
+            >
+              BookBud
+            </Typography>
+          </Link>
           <div className="hidden lg:block">
             <NavList />
           </div>
