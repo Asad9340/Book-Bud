@@ -77,7 +77,7 @@ function Details({ book }) {
         <CardHeader
           shadow={false}
           floated={false}
-          className="lg:w-2/5 shrink-0 rounded-r-none"
+          className="lg:w-2/5 shrink-0 rounded-lg md:rounded-r-none"
         >
           <img
             src={image}
@@ -86,7 +86,7 @@ function Details({ book }) {
           />
         </CardHeader>
         <CardBody>
-          <Typography variant="h2" color="black" className="mb-4 uppercase">
+          <Typography  color="black" className="mb-4 uppercase text-2xl md:text-3xl">
             {bookName}
           </Typography>
           <Typography className="mb-2">

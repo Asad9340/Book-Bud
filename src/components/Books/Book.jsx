@@ -5,8 +5,12 @@ function Book({ book }) {
   return (
     <NavLink to={`/book-details/${bookId}`}>
       <div className="p-2 md:p-3 rounded-lg space-y-4 border m-4">
-        <div>
-          <img className="rounded-lg h-[450px] w-full" src={image} alt="" />
+        <div className="p-10 bg-gray-300 rounded-lg">
+          <img
+            className="rounded-lg h-[260px] md:h-[300px] w-full"
+            src={image}
+            alt=""
+          />
         </div>
         <div className="flex gap-4">
           <p className="text-[#23BE0A] bg-[#23BE0A0D] px-6 py-1 rounded-full">

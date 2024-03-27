@@ -3,7 +3,7 @@ import Book from './Book';
 function Books() {
   const { data } = useBooks();
   return (
-    <div className="my-8 md:my-12 space-y-4 md:space-y-6">
+    <div className="my-10 md:my-14 space-y-4 md:space-y-6">
       <div>
         <h2 className="text-4xl md:text-6xl font-semibold md:font-bold text-center">Books</h2>
       </div>

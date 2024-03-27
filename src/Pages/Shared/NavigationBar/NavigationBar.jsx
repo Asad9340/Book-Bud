@@ -12,7 +12,7 @@ import Spinner from '../../../components/Spinner/Spinner';
 
 function NavList() {
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-3 ">
+    <ul className="flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-3 ">
       <Typography
         as="li"
         variant="small"
@@ -25,7 +25,7 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
             )
@@ -46,7 +46,7 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
             )
@@ -67,7 +67,7 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
             )
@@ -88,7 +88,7 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
             )
@@ -109,7 +109,7 @@ function NavList() {
             isPending ? (
               <Spinner />
             ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-2 rounded-md'
+              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
             )
@@ -136,7 +136,7 @@ function NavigationBar() {
   }, []);
   return (
     <div>
-      <Navbar className=" py-3 shadow-none">
+      <Navbar className="shadow-none">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
