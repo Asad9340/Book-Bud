@@ -4,7 +4,6 @@ import Spinner from '../../components/Spinner/Spinner';
 
 function LegacyBooks() {
   const data = useLoaderData();
-  console.log(data);
   return (
     <div className="md:my-12">
       <div className="space-y-4">

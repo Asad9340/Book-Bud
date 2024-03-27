@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
       {
         path: '/legacy-books',
         element: <LegacyBooks />,
-        loader:()=> fetch('/legacyBooks.json'),
+        loader:()=> fetch('./legacyBooks.json'),
       },
       {
         path: '/about',
