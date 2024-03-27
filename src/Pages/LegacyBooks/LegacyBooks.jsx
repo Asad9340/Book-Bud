@@ -1,9 +1,10 @@
-import { useLoaderData } from "react-router-dom";
-import LegacyBook from "../../components/LegacyBook/LegacyBook";
+import { useLoaderData } from 'react-router-dom';
+import LegacyBook from '../../components/LegacyBook/LegacyBook';
+import Spinner from '../../components/Spinner/Spinner';
 
 function LegacyBooks() {
   const data = useLoaderData();
-  console.log(data)
+  console.log(data);
   return (
     <div className="md:my-12">
       <div className="space-y-4">
@@ -19,9 +20,11 @@ function LegacyBooks() {
         </p>
       </div>
       <div>
-        {
-          data.map((item,index)=><LegacyBook key={index} book={item}  />)
-        }
+        {data.length ? (
+          data.map((item, index) => <LegacyBook key={index} book={item} />)
+        ) : (
+          <Spinner />
+        )}
       </div>
     </div>
   );

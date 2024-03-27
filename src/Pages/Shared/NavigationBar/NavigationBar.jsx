@@ -8,7 +8,6 @@ import {
 } from '@material-tailwind/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { NavLink } from 'react-router-dom';
-import Spinner from '../../../components/Spinner/Spinner';
 
 function NavList() {
   return (
@@ -21,14 +20,10 @@ function NavList() {
       >
         <NavLink
           to="/"
-          className={({ isActive, isPending }) =>
-            isPending ? (
-              <Spinner />
-            ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
-            ) : (
-              'flex items-center border border-white'
-            )
+          className={({ isActive }) =>
+            isActive
+              ? 'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
+              : 'flex items-center border border-white'
           }
         >
           Home
@@ -42,10 +37,8 @@ function NavList() {
       >
         <NavLink
           to="/listed-books"
-          className={({ isActive, isPending }) =>
-            isPending ? (
-              <Spinner />
-            ) : isActive ? (
+          className={({ isActive }) =>
+             isActive ? (
               'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
@@ -63,10 +56,8 @@ function NavList() {
       >
         <NavLink
           to="/to-read"
-          className={({ isActive, isPending }) =>
-            isPending ? (
-              <Spinner />
-            ) : isActive ? (
+          className={({ isActive }) =>
+             isActive ? (
               'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
@@ -84,10 +75,8 @@ function NavList() {
       >
         <NavLink
           to="/legacy-books"
-          className={({ isActive, isPending }) =>
-            isPending ? (
-              <Spinner />
-            ) : isActive ? (
+          className={({ isActive }) =>
+             isActive ? (
               'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
             ) : (
               'flex items-center border border-white'
@@ -105,14 +94,10 @@ function NavList() {
       >
         <NavLink
           to="/about"
-          className={({ isActive, isPending }) =>
-            isPending ? (
-              <Spinner />
-            ) : isActive ? (
-              'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
-            ) : (
-              'flex items-center border border-white'
-            )
+          className={({ isActive }) =>
+            isActive
+              ? 'border border-[#23BE0A] text-[#23BE0A] px-2 py-1 rounded-md'
+              : 'flex items-center border border-white'
           }
         >
           About

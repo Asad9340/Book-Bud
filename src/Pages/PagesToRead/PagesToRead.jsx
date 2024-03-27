@@ -21,7 +21,7 @@ function PagesToRead() {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
   return (
-    <div className="flex justify-center h-[65vh]">
+    <div className="flex justify-center h-[65vh] items-center my-8 md:my-12">
       <BarChart
         width={600}
         height={400}
